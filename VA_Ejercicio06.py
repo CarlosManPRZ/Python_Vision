@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 #Lectura de imagen
 img_org = cv.imread("Guacamaya.jpg")
 img_org = cv.cvtColor(img_org, cv.COLOR_BGR2RGB)
-#img_org = cv.resize(img_org,(800,800))
+img_org = cv.resize(img_org,(800,800))
 
 m,n,p = img_org.shape
 print(img_org.shape)
