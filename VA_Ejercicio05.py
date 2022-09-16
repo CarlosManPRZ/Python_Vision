@@ -1,3 +1,8 @@
+#Programa para aplicar la transformacion de perspectiva de forma interactiva
+#En la primer imagen seleccionar 4 puntos sobre la misma (color azul) que seran los puntos a transformar
+#Posterioremente, seleccionar otros 4 puntos (color rojo) que serán los puntos de destino
+#Ya seleccionados los puntos de origen y destino, presionar ESC para mostrar la imagen original y su transformada
+
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
