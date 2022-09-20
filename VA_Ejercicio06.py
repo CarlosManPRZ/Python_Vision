@@ -12,7 +12,8 @@ img_org = cv.imread("Guacamaya.jpg")
 img_org = cv.cvtColor(img_org, cv.COLOR_BGR2RGB)
 m0,n0,p0 = img_org.shape
 print(img_org.shape)
-img_org = cv.resize(img_org,(int(n0/4),int(m0/4)))
+reduccion_imagen =  4
+img_org = cv.resize(img_org,(int(n0/reduccion_imagen),int(m0/reduccion_imagen)))
 m,n,p = img_org.shape
 print(img_org.shape)
 
@@ -64,14 +65,16 @@ fig2, ax2= plt.subplots(1,3)
 fig2.suptitle('Comparación de Histogramas')
 ax2[0].plot(hist1,'-')
 ax2[0].plot(hist2,'--r')
+ax2[0].legend(['Algoritmo usuario','Algoritmo OPEN CV'])
 ax2[0].set_title('Canal R')
 ax2[1].plot(hist3)
 ax2[1].plot(hist4,'--g')
 ax2[1].set_title('Canal G')
+ax2[1].legend(['Algoritmo usuario','Algoritmo OPEN CV'])
 ax2[2].plot(hist5)
 ax2[2].plot(hist6,'--b')
 ax2[2].set_title('Canal B')
-
+ax2[2].legend(['Algoritmo usuario','Algoritmo OPEN CV'])
 
 
 plt.show()
