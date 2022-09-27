@@ -1,5 +1,5 @@
 #Ecualización de histograma
-#Imagen original: Guacamaya con brillo horizontal
+#Imagen original: Guacamaya - RGB
 
 #Lectura de imagen
 from typing import ChainMap
