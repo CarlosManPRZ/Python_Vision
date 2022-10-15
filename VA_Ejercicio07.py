@@ -1,5 +1,5 @@
 #Aplicar filtro: Contraste (gain) y brillo(bias)
-#Filtro u Operador punto a punto
+#Operador punto a punto
 #Algoritmo programado manualmente
 
 #Lectura de imagen
@@ -45,7 +45,7 @@ img_mod2 = np.zeros((m,n,p),np.uint8)
 gain1 = 1
 bias1 = 100
 gain2 = 1.5
-bias2=-100 
+bias2=0
 
 #Aplicacion de filtro           
 img_mod1 = filterGB(img_org,gain1,bias1)
@@ -57,9 +57,9 @@ fig.suptitle('Filtro lineal: '+ r'$g(i,j)=a\cdot f(i,j)+b,\, a>0$')
 ax[0].imshow(img_org)
 ax[0].set_title('Imagen original')
 ax[1].imshow(img_mod1)
-ax[1].set_title('gain=1,bias=100')
+ax[1].set_title('gain='+str(gain1)+', bias='+str(bias1))
 ax[2].imshow(img_mod2)
-ax[2].set_title('gain=1.5,bias=-100')
+ax[2].set_title('gain='+str(gain2)+', bias='+str(bias2))
 
 
 ##Comparacion de histogramas

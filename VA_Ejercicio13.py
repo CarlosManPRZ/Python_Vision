@@ -23,7 +23,6 @@ plt.xticks([]), plt.yticks([])
 plt.subplot(133),plt.imshow(img_blur2, cmap='gray'),plt.title('Kernel 5x5')
 plt.xticks([]), plt.yticks([])
 
-
 histr_org = cv.calcHist([img],[0],None,[256],[0,256])
 histr_blur1 = cv.calcHist([img_blur1],[0],None,[256],[0,256])
 histr_blur2 = cv.calcHist([img_blur2],[0],None,[256],[0,256])
@@ -34,6 +33,5 @@ plt.plot(histr_org,'-k')
 plt.plot(histr_blur1,'-b')
 plt.plot(histr_blur2,'--r')
 plt.legend(['Original','Kernel 3x3','Kernel 5x5'])
-
 
 plt.show()

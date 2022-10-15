@@ -47,7 +47,7 @@ img_mod2 = np.zeros((m,n,p),np.uint8)
 gain1 = 1
 gain2 = 1
 
-#bias2 = np.random.randint(255,size=(m,n))
+
 biasx1 = np.linspace(0,256,m)
 biasy1 = np.linspace(0,256,n)
 biash1,biasv1 = np.meshgrid(biasy1,biasx1)
